@@ -1,0 +1,55 @@
+-- CREATE DATABASE kantor;
+-- USE kantor;
+
+-- nomor 1
+-- CREATE TABLE offices (
+-- officeCode VARCHAR (10) NOT NULL,
+-- city VARCHAR (50) NOT NULL,
+-- phone VARCHAR(50) NOT NULL,
+-- addressline1 VARCHAR (50) NOT NULL,
+-- addressline2 VARCHAR (50),
+-- state VARCHAR (50),
+-- country VARCHAR (50) NOT NULL,
+-- PRIMARY KEY(officeCode));
+
+-- nomor 2 
+-- DESCRIBE offices;
+
+-- nomor 3
+-- ALTER TABLE offices MODIFY phone INT(20);
+
+-- nomor 4
+-- ALTER TABLE offices DROP addressline2;
+-- 
+-- nomor 5
+
+-- CREATE DATABASE db_praktikum
+-- USE db_praktikum
+-- 
+-- CREATE TABLE buku(
+-- id_buku INT AUTO_INCREMENT,
+-- judul varchar(255), 
+-- tahun_terbit INT,
+-- pengarang VARCHAR(255),
+-- PRIMARY KEY (id_buku)
+-- );
+-- 
+-- CREATE TABLE mahasiswa(
+-- id_mahasiswa BIGINT UNSIGNED AUTO_INCREMENT,
+-- nama VARCHAR(255),
+-- nim VARCHAR(10) NOT null,
+-- jk CHAR(1),
+-- PRIMARY KEY(id_mahasiswa)
+-- );
+-- 
+-- CREATE TABLE pinjam(
+-- id_pinjam INT UNSIGNED AUTO_INCREMENT,
+-- tanggal_pinjam DATETIME,
+-- id_mahasiswa BIGINT UNSIGNED,
+-- id_buku INT,
+-- status_pengembalian TINYINT(1),
+-- PRIMARY KEY(id_pinjam),
+-- CONSTRAINT fmipa_mahasiswa FOREIGN KEY(id_mahasiswa) REFERENCES mahasiswa(id_mahasiswa),
+-- CONSTRAINT fmipa_buku FOREIGN KEY(id_buku) REFERENCES buku (id_buku)
+-- );
+-- 
